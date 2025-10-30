@@ -14,12 +14,12 @@ console.log("Después de reasignar:", x, y, z);
 
 // Alcance
 if (true) {
-  var a = "var dentro de bloque";
-  let b = "let dentro de bloque";
-  const c = "const dentro de bloque";
+  var a = "a";
+  let b = "b";
+  const c = "c";
   console.log("Dentro del bloque:", a, b, c);
 }
 
-console.log("Fuera del bloque, var:", a); // existe
+console.log("Fuera del bloque, var:", a, c); // existe
 // console.log("Fuera del bloque, let:", b); // ❌ no existe
 // console.log("Fuera del bloque, const:", c); // ❌ no existe
