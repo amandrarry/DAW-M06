@@ -63,3 +63,33 @@ inventario.sort(ordenarPorPrecio);
 console.log("Matriz inventario ordenada por precio ascendente:", inventario);
 
 
+// Ejercicio 3.1 - Adición de un Método al Prototype
+console.log("=== Ejercicio 3.1: Añadir método obtenerUltimoElemento al prototype ===");
+
+// Añadimos el nuevo método al prototype del objeto Array
+Array.prototype.obtenerUltimoElemento = function() {
+  // 'this' hace referencia al array que invoca el método
+  // 'this.length - 1' es el índice del último elemento
+  // Se devuelve ese elemento sin modificar el array
+  return this[this.length - 1];
+};
+
+
+// Ejercicio 3.2 - Verificación del Nuevo Método
+console.log("=== Ejercicio 3.2: Verificación del nuevo método ===");
+
+// Creamos un array de prueba
+let numeros = [10, 20, 30, 40, 50];
+
+// Mostramos el array original por consola
+console.log("Array original:", numeros);
+
+// Llamamos al nuevo método obtenerUltimoElemento()
+let ultimo = numeros.obtenerUltimoElemento();
+
+// Mostramos el resultado del método
+console.log("Último elemento obtenido:", ultimo);
+
+// Verificamos que el array no se ha modificado
+console.log("Array después de usar obtenerUltimoElemento():", numeros);
+console.log("Longitud del array (debe seguir siendo 5):", numeros.length);
